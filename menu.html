@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Game - BG & Coffee Central</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+    
+    <!-- Add padding to push content below fixed navbar if not using hero section -->
+    <style>
+        #menu { padding-top: 100px; }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="90">
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-dice-d20 fs-2 me-2"></i>
+                <span>BG & Coffee<br><small class="text-muted fs-6 d-block"
+                        style="line-height:0.5; font-weight: 500;">Central Biên Hòa</small></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="menu.html">Menu Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="drinks.html">Đồ Uống</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Đặt bàn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-custom px-4 py-2" href="booking.html" style="font-size: 0.95rem;">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Game Section -->
+    <section id="menu" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-danger fw-bold mb-2">THƯ VIỆN GAME ĐỒ SỘ</h6>
+                <h2 class="section-title text-center d-inline-block">Các Tựa Game Tiêu Biểu</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Game 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/masoi.jpg" class="card-img-top" alt="Ma Sói">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">Ma Sói</h4>
+                                <span class="badge bg-dark">7-20+ người</span>
+                            </div>
+                            <p class="card-text text-muted">Trò chơi ẩn vai trò kinh điển. Phá án, biện luận và tìm ra
+                                bầy sói đang ẩn mình trong ngôi làng yên bình.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-danger">Ẩn vai trò</span>
+                                <span class="badge bg-secondary">Biện luận</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/meono.jpg" class="card-img-top" alt="Mèo Nổ">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">Mèo Nổ</h4>
+                                <span class="badge bg-dark">2-5 người</span>
+                            </div>
+                            <p class="card-text text-muted">Lối chơi nhịp độ cao, sát phạt mạnh. Hãy là người sống sót
+                                cuối cùng và né xa những quả bom mèo.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-warning text-dark">Vui nhộn</span>
+                                <span class="badge bg-danger">Party</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game 3 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/catan.jpg" class="card-img-top" alt="Catan">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">Catan</h4>
+                                <span class="badge bg-dark">3-4 người</span>
+                            </div>
+                            <p class="card-text text-muted">Tuyệt tác chiến thuật. Xây dựng đường xá, thành phố và đàm
+                                phán mậu dịch trên hòn đảo Catan trù phú.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-primary">Chiến thuật</span>
+                                <span class="badge bg-success">Đàm phán</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game 4 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/uno.jpg" class="card-img-top" alt="Uno">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">UNO & Mở rộng</h4>
+                                <span class="badge bg-dark">2-10 người</span>
+                            </div>
+                            <p class="card-text text-muted">Ông hoàng phá nát tình bạn. Đầy đủ các bản mở rộng H2O,
+                                Flip, No Mercy cho những trận chiến nảy lửa.</p>
+                            <div class="mt-3">
+                                <span class="badge" style="background-color: #e74c3c;">Giải trí</span>
+                                <span class="badge" style="background-color: #3498db;">Gia đình</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game 5 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/Splendor.jpg" class="card-img-top" alt="Splendor">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">Splendor</h4>
+                                <span class="badge bg-dark">2-4 người</span>
+                            </div>
+                            <p class="card-text text-muted">Hóa thân thành thương nhân đá quý thời Phục Hưng. Tối ưu hóa
+                                bộ máy kiếm điểm để giành vinh quang.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-info text-dark">Kinh tế</span>
+                                <span class="badge bg-secondary">Tư duy</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Game 6 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="images/Dixit.jpg" class="card-img-top" alt="Dixit">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                <h4 class="card-title mb-0">Dixit</h4>
+                                <span class="badge bg-dark">3-8 người</span>
+                            </div>
+                            <p class="card-text text-muted">Thử thách trí tưởng tượng và sự thấu hiểu. Những bức tranh
+                                siêu thực và những câu gợi ý đầy nghệ thuật.</p>
+                            <div class="mt-3">
+                                <span class="badge" style="background-color: #9b59b6;">Sáng tạo</span>
+                                <span class="badge bg-secondary">Hình ảnh</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted fs-5 mb-3">Và hàng trăm tựa game khác đang chờ bạn khám phá tại quán!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-center mb-4">
+                <a href="https://www.facebook.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p class="mb-2 fw-bold text-white">&copy; 2024 Board Game & Coffee Central Biên Hòa.</p>
+            <p class="mb-0 small text-secondary">Thiết kế bởi Đam Mê <i class="fa-solid fa-heart text-danger mx-1"></i>
+                dành cho Cộng đồng Board Game thủ.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
