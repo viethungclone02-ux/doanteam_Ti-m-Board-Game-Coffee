@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="vi" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Đồ Uống - BG & Coffee Central</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        #drinks {
+            padding-top: 100px;
+        }
+
+        .category-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding-bottom: 0.5rem;
+        }
+
+        .category-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color, #e74c3c);
+            border-radius: 2px;
+        }
+
+        .drink-img {
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.4s ease;
+            background-color: #2a2a2a;
+            /* Placeholder text background */
+            position: relative;
+        }
+
+        .card:hover .drink-img {
+            transform: scale(1.03);
+            opacity: 0.9;
+        }
+
+        .img-container {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        /* Style để hiển thị text nhắc nhở khi CÓ LỖI CHƯA TẢI ẢNH LÊN */
+        .drink-img[alt]:after {
+            content: "Ảnh: " attr(alt);
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #333;
+            color: #888;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 220px;
+        }
+
+        /* Đảm bảo text tiêu đề giữ màu trắng khi cho vào a href */
+        .card-link-wrapper {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="90">
+
+    <!-- Header / Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-dice-d20 fs-2 me-2"></i>
+                <span>BG & Coffee<br><small class="text-muted fs-6 d-block"
+                        style="line-height:0.5; font-weight: 500;">Central Biên Hòa</small></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">Menu Game</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="drinks.html">Đồ Uống</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="booking.html">Đặt bàn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn btn-custom px-4 py-2" href="booking.html" style="font-size: 0.95rem;">Book Now</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Drinks Menu Section -->
+    <section id="drinks" class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <h6 class="text-warning fw-bold mb-2">ĐỒ UỐNG & ĐỒ ĂN NHẸ</h6>
+                <h2 class="section-title text-center d-inline-block">Năng Lượng Cho Mọi Bàn Chơi</h2>
+            </div>
+
+            <!-- Cà phê -->
+            <div class="mb-5">
+                <div class="text-center">
+                    <h3 class="category-title text-white"><i class="fa-solid fa-mug-hot me-2 text-warning"></i> Cà Phê
+                        Truyền Thống</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/cafeden.jpg" class="card-img-top drink-img" alt="Cà Phê Đen Đá">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Cà Phê Đen Đá</h5>
+                                <p class="text-muted small mb-2">Đậm đà, bừng tỉnh</p>
+                                <span class="badge bg-secondary fs-6">25,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/cafesua.jpg" class="card-img-top drink-img" alt="Cà Phê Sữa Đá">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Cà Phê Sữa Đá</h5>
+                                <p class="text-muted small mb-2">Hương vị Sài Gòn quen thuộc</p>
+                                <span class="badge bg-secondary fs-6">29,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/bacxiu.jpg" class="card-img-top drink-img" alt="Bạc Xỉu">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Bạc Xỉu</h5>
+                                <p class="text-muted small mb-2">Ít cafe, nhiều sữa</p>
+                                <span class="badge bg-secondary fs-6">35,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Lattehatphi.jpg" class="card-img-top drink-img"
+                                    alt="Latte Hạt Phỉ">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Latte Hạt Phỉ</h5>
+                                <p class="text-muted small mb-2">Cafe kiểu Tây</p>
+                                <span class="badge bg-secondary fs-6">45,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trà & Trà Sữa -->
+            <div class="mb-5">
+                <div class="text-center">
+                    <h3 class="category-title text-white"><i class="fa-solid fa-leaf me-2 text-success"></i> Trà Trái
+                        Cây & Trà Sữa</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/tradaocamsa.jpg" class="card-img-top drink-img"
+                                    alt="Trà Đào Cam Sả">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Trà Đào Cam Sả</h5>
+                                <p class="text-muted small mb-2">Thanh mát, đậm vị đào</p>
+                                <span class="badge bg-secondary fs-6">39,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/travai.jpg" class="card-img-top drink-img"
+                                    alt="Trà Vải Nhiệt Đới">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Trà Vải Nhiệt Đới</h5>
+                                <p class="text-muted small mb-2">Ngọt ngào hương vải</p>
+                                <span class="badge bg-secondary fs-6">39,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/trasua.jpg" class="card-img-top drink-img"
+                                    alt="Trà Sữa Trân Châu">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Trà Sữa Trân Châu</h5>
+                                <p class="text-muted small mb-2">Trà sữa Đài Loan truyền thống</p>
+                                <span class="badge bg-secondary fs-6">35,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Đá Xay & Soda -->
+            <div class="mb-5">
+                <div class="text-center">
+                    <h3 class="category-title text-white"><i class="fa-solid fa-snowflake me-2 text-info"></i> Đá Xay &
+                        Nước Ngọt</h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Matchadaxay.jpg" class="card-img-top drink-img"
+                                    alt="Matcha Đá Xay">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Matcha Đá Xay</h5>
+                                <p class="text-muted small mb-2">Trà xanh Nhật Bản</p>
+                                <span class="badge bg-secondary fs-6">49,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Sodavietquat.jpg" class="card-img-top drink-img"
+                                    alt="Soda Việt Quất">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Soda Việt Quất</h5>
+                                <p class="text-muted small mb-2">Giải khát cực mạnh</p>
+                                <span class="badge bg-secondary fs-6">35,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/nuocngot.jpg" class="card-img-top drink-img"
+                                    alt="Sting / Redbull / Nước Suối">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Sting / Redbull / Nước Suối</h5>
+                                <p class="text-muted small mb-2">Lon tiêu chuẩn</p>
+                                <span class="badge bg-secondary fs-6">20,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks -->
+            <div class="mb-3">
+                <div class="text-center">
+                    <h3 class="category-title text-white"><i class="fa-solid fa-hotdog me-2 text-danger"></i> Đồ Ăn Vặt
+                    </h3>
+                </div>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Hathuongduong.jpg" class="card-img-top drink-img"
+                                    alt="Hạt Hướng Dương">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Hạt Hướng Dương</h5>
+                                <span class="badge bg-secondary fs-6">15,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Khoaitaychien.jpg" class="card-img-top drink-img"
+                                    alt="Khoai Tây Chiên">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Khoai Tây Chiên</h5>
+                                <span class="badge bg-secondary fs-6">35,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/Khoga.jpg" class="card-img-top drink-img" alt="Khô Gà Lá Chanh">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Khô Gà Lá Chanh</h5>
+                                <span class="badge bg-secondary fs-6">40,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="card h-100 overflow-hidden">
+                            <div class="img-container">
+                                <img src="images/drink/cavienchien.jpg" class="card-img-top drink-img"
+                                    alt="Cá Viên Chiên">
+                            </div>
+                            <div class="card-body text-center">
+                                <h5 class="card-title mb-1 text-white">Cá Viên Chiên</h5>
+                                <span class="badge bg-secondary fs-6">40,000đ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5 pt-4 border-top border-secondary border-opacity-25">
+                <a href="booking.html" class="btn btn-custom btn-lg"><i class="fa-solid fa-calendar-check me-2"></i>Đặt
+                    Bàn & Pre-order Ngay!</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="d-flex justify-content-center mb-4">
+                <a href="https://www.facebook.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/" class="text-secondary mx-3 fs-4 hover-text-white"><i
+                        class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p class="mb-2 fw-bold text-white">&copy; 2024 Board Game & Coffee Central Biên Hòa.</p>
+            <p class="mb-0 small text-secondary">Thiết kế bởi Đam Mê <i class="fa-solid fa-heart text-danger mx-1"></i>
+                dành cho Cộng đồng Board Game thủ.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
