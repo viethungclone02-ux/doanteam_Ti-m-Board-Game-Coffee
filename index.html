@@ -11,6 +11,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <link rel="stylesheet" href="CSS/style.css">
+
+    <style>
+        /* Hiệu ứng nhịp đập thu hút sự chú ý */
+        @keyframes pulse-attention {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+            }
+        }
+
+        .pulse-attention {
+            animation: pulse-attention 2s infinite;
+            display: inline-block;
+        }
+    </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="90">
@@ -32,6 +57,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Trang chủ</a>
                     </li>
+
                     <li class="nav-item">
                         <a class="nav-link" href="menu.html">Menu Game</a>
                     </li>
@@ -58,7 +84,13 @@
             <div class="row">
                 <div class="col-lg-8 col-md-10">
                     <div class="hero-content">
-                        <span class="badge bg-danger mb-3 px-3 py-2 fs-6">Khai trương không gian mới</span>
+                        <!-- Nút nhỏ ở Hero Section giúp chuyển hướng thẳng tới Sự kiện -->
+                        <a href="#events" class="text-decoration-none">
+                            <span
+                                class="badge bg-danger mb-3 px-4 py-2 fs-6 pulse-attention border border-2 border-warning">
+                                <i class="fa-solid fa-fire me-2"></i>GIẢI ĐẤU CATAN - TỔNG THƯỞNG 5.000.000Đ
+                            </span>
+                        </a>
                         <h1 class="hero-title">Kết Nối Đam Mê<br><span>Thỏa Sức Tranh Tài</span></h1>
                         <p class="hero-subtitle">Tổ hợp Board Game & Cà Phê lớn nhất khu vực Biên Hòa. Nơi chiến thuật
                             lên ngôi và những nụ cười không bao giờ tắt.</p>
@@ -67,6 +99,110 @@
                                 Menu
                                 Game</a>
                             <a href="booking.html" class="btn btn-custom">Đặt Bàn Giữ Chỗ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Section -->
+    <section id="events" class="py-5 position-relative"
+        style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); overflow: hidden;">
+        <!-- Decorative background elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100"
+            style="opacity: 0.1; background-image: radial-gradient(circle at 20% 50%, #e94560 0%, transparent 50%), radial-gradient(circle at 80% 80%, #0f3460 0%, transparent 50%); z-index: 0;">
+        </div>
+
+        <div class="container py-5 position-relative z-1" style="z-index: 1;">
+            <div class="text-center mb-5">
+                <span class="badge bg-warning text-dark px-4 py-2 fs-6 mb-3 rounded-pill shadow-sm"><i
+                        class="fa-solid fa-fire me-2 text-danger"></i>Sự Kiện Hot Nhất Tháng</span>
+                <h2 class="display-5 fw-bold text-white mb-3" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">ĐẠI
+                    CHIẾN CATAN MÙA HÈ 2024</h2>
+                <div class="mx-auto bg-danger" style="height: 4px; width: 80px; border-radius: 2px;"></div>
+                <p class="text-light mt-3 fs-5 mx-auto" style="max-width: 600px;">Sân chơi đẳng cấp dành cho các cao thủ
+                    chiến thuật. Hãy chứng tỏ bản lĩnh và mang về những phần quà giá trị!</p>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <!-- Image column with hover effect -->
+                <div class="col-lg-5">
+                    <div class="card border-0 rounded-4 overflow-hidden"
+                        style="box-shadow: 0 15px 35px rgba(0,0,0,0.6) !important; transform: rotate(-2deg); transition: all 0.4s ease; background-color: #000;"
+                        onmouseover="this.style.transform='rotate(0deg) scale(1.02)'"
+                        onmouseout="this.style.transform='rotate(-2deg) scale(1)'">
+                        <img src="images/catan.jpg" alt="Giải đấu Catan" class="img-fluid" style="opacity: 0.85;">
+                        <div class="position-absolute bottom-0 start-0 w-100 p-4"
+                            style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 50%, transparent 100%);">
+                            <h4 class="text-warning fw-bold mb-1"><i class="fa-solid fa-trophy me-2"></i>Tổng Giải
+                                Thưởng</h4>
+                            <h3 class="text-white fw-bold mb-0">Lên đến 5.000.000đ</h3>
+                        </div>
+                        <div class="position-absolute top-0 end-0 m-3">
+                            <span class="badge bg-danger fs-5 py-2 px-3 rounded-pill shadow">HOT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content column -->
+                <div class="col-lg-7">
+                    <div class="ps-lg-4">
+                        <h3 class="text-white mb-4 fw-bold" style="line-height: 1.4;">Truy Tìm <span
+                                class="text-warning">Chúa Tể Đảo Catan</span> Thế Hệ Mới</h3>
+
+                        <div class="d-flex flex-column gap-3 mb-4">
+                            <!-- Detail item 1 -->
+                            <div class="d-flex align-items-center p-3 rounded-3"
+                                style="background: rgba(255,255,255,0.06); border-left: 4px solid #e94560; backdrop-filter: blur(5px);">
+                                <div class="bg-dark bg-opacity-50 p-3 rounded-circle me-3">
+                                    <i class="fa-regular fa-calendar-check text-danger fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 text-white fw-bold fs-5">Thời gian & Thể thức</h6>
+                                    <p class="mb-0 text-light" style="opacity: 0.8;">Chủ Nhật, 25/08/2024 (Đấu vòng bảng
+                                        & Chung kết)</p>
+                                </div>
+                            </div>
+
+                            <!-- Detail item 2 -->
+                            <div class="d-flex align-items-center p-3 rounded-3"
+                                style="background: rgba(255,255,255,0.06); border-left: 4px solid #f39c12; backdrop-filter: blur(5px);">
+                                <div class="bg-dark bg-opacity-50 p-3 rounded-circle me-3">
+                                    <i class="fa-solid fa-users text-warning fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 text-white fw-bold fs-5">Số lượng giới hạn</h6>
+                                    <p class="mb-0 text-light" style="opacity: 0.8;">Chỉ 32 vé thi đấu dành cho những
+                                        người đăng ký sớm nhất</p>
+                                </div>
+                            </div>
+
+                            <!-- Detail item 3 -->
+                            <div class="d-flex align-items-center p-3 rounded-3"
+                                style="background: rgba(255,255,255,0.06); border-left: 4px solid #2ecc71; backdrop-filter: blur(5px);">
+                                <div class="bg-dark bg-opacity-50 p-3 rounded-circle me-3">
+                                    <i class="fa-solid fa-gift text-success fs-3"></i>
+                                </div>
+                                <div>
+                                    <h6 class="mb-1 text-white fw-bold fs-5">Quyền lợi người chơi</h6>
+                                    <p class="mb-0 text-light" style="opacity: 0.8;">Bao gồm 1 phần nước tự chọn + Quà
+                                        tặng độc quyền từ BG Central</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mt-4 flex-wrap">
+                            <a href="booking.html"
+                                class="btn btn-danger btn-lg px-4 py-3 rounded-pill fw-bold shadow-lg"
+                                style="transition: transform 0.2s;">
+                                <i class="fa-solid fa-ticket-simple me-2"></i>Mở Link Đăng Ký Ngay
+                            </a>
+                            <a href="masoi.html#catan"
+                                class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill fw-bold"
+                                style="transition: transform 0.2s;">
+                                Xem Luật Thi Đấu
+                            </a>
                         </div>
                     </div>
                 </div>

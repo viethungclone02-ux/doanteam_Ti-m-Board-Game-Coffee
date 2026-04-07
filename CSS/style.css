@@ -40,9 +40,9 @@ body {
 .navbar-toggler {
     border-color: rgba(255,255,255,0.1) !important;
 }
-/* Invert burger icon for dark mode */
+/* Ensure burger icon is fully visible */
 .navbar-toggler-icon {
-    filter: invert(1);
+    filter: none;
 }
 .nav-link {
     font-weight: 600;
@@ -376,12 +376,28 @@ footer a:hover {
     .price-box {
         padding: 25px;
     }
+    
+    /* Fix badge overflow and text wrapping on mobile */
+    .badge {
+        white-space: normal !important;
+        word-wrap: break-word;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    /* Optimize event card image on mobile */
+    .card.border-0.rounded-4.overflow-hidden {
+        transform: rotate(0) !important; /* Disable rotation on mobile for better fit */
+    }
+
     /* Stack buttons nicely on mobile */
     .d-flex.gap-3 {
         flex-direction: column;
         gap: 15px !important;
     }
-    .btn-custom, .btn-light {
+    .btn-custom, .btn-light, .btn-danger, .btn-outline-light {
         width: 100%;
+        text-align: center;
+        justify-content: center;
     }
 }
